@@ -1,7 +1,5 @@
-*
-
-!*.cpp
-!*.h
-!.gitignore
-!README.md
-!include/
+/atr_siderurgica/Release
+/atr_siderurgica/.vs
+/atr_siderurgica/principal/Release
+/atr_siderurgica/mensagensCLP/Release
+/atr_siderurgica/exibirAlarmes/Release
