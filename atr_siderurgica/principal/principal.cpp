@@ -4,6 +4,10 @@
 int main() {
 	printf("Hello, I'm principal.cpp\n");
 
+	//O diretorio deve ser relativo ao ARQUIVO CPP principal.cpp
+	LPCSTR pathMensagensCLP = "..\\Debug\\mensagensCLP.exe";
+	LPCSTR pathExibirAlarme = "..\\Debug\\exibirAlarmes.exe";
+
 	STARTUPINFO siMensagensCLP;
 	PROCESS_INFORMATION piMensagensCLP;
 
@@ -15,7 +19,7 @@ int main() {
 
 	//Cria processo mensagensCLP
 	status = CreateProcess(
-		"..\\Debug\\mensagensCLP.exe",
+		pathMensagensCLP,
 		NULL,
 		NULL,
 		NULL,
@@ -38,7 +42,7 @@ int main() {
 
 	//Cria processo ExibirAlarme
 	status = CreateProcess(
-		"..\\Debug\\exibirAlarmes.exe",
+		pathExibirAlarme,
 		NULL,
 		NULL,
 		NULL,
