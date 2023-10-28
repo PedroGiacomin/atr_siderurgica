@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>C:\Users\letic\OneDrive\Área de Trabalho\UFMG\VI Período\Automação em Tempo Real\TP_ATR\atr_siderurgica\x64\Debug\exibirAlarmes.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\letic\OneDrive\Área de Trabalho\UFMG\VI Período\Automação em Tempo Real\TP_ATR\atr_siderurgica\x64\Debug\mensagensCLP.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\letic\OneDrive\Área de Trabalho\UFMG\VI Período\Automação em Tempo Real\TP_ATR\atr_siderurgica\x64\Debug\principal.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>
