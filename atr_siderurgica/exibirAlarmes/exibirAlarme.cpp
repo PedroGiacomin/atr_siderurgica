@@ -7,7 +7,7 @@ HANDLE event_ESC;
 int main() {
 	printf("Hello, I'm exibirAlarme.cpp\n");
 
-	// Abre handle para o evento de encerramento
+	// Abre handles para os evento a criados
 	event_ESC = OpenEvent(
 		EVENT_ALL_ACCESS,			//Acesso irrestrito ao evento
 		FALSE,
@@ -47,9 +47,6 @@ int main() {
 			printf("Erro no recebimento do evento! Codigo = %d\n", GetLastError());
 	} while (nTipoEvento == 0); // Ate ESC ser escolhido
 
-
-	std::cout << "Pressione Enter para encerrar o programa." << std::endl;
-    std::cin.get();
 
 	return EXIT_SUCCESS;
 }
