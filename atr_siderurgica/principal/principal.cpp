@@ -56,7 +56,7 @@ int main() {
 		NULL,							// Seguranca (default)
 		TRUE,							// Reset manual (acorda todas as threads simultaneamente)
 		FALSE,							// Inicia desativado
-		L"Evento_ESC"					// Nome do evento
+		(LPWSTR)"EventoESC"				// Nome do evento
 	);
 	if (!event_ESC)
 		printf("Erro na criacao de do evento ESC! Codigo = %d\n", GetLastError());
@@ -106,23 +106,31 @@ int main() {
 	do {
 		printf("Digite uma tecla para encerrar a tarefa que quiser\n");	//pode tirar isso depois
 		nTecla = _getch();	// Isso aqui vai dar errado pra quando a lista estiver cheia
-		if (nTecla == TECLA_1) 
-			status = SetEvent(events[0]);
-		else if (nTecla == TECLA_2)
-			status = SetEvent(events[1]);
-		else if (nTecla == TECLA_M)
-			status = SetEvent(events[2]);
-		else if (nTecla == TECLA_P)
-			status = SetEvent(events[3]);
-		else if (nTecla == TECLA_R)
-			status = SetEvent(events[4]);
-		else if (nTecla == TECLA_A)
-			status = SetEvent(events[5]);
-		else if (nTecla == ESC)
-			status = PulseEvent(event_ESC);
-        
+		switch (nTecla){
+            case TECLA_1:
+                status = SetEvent(events[0]);
+				break;
+            case TECLA_2:
+                status = SetEvent(events[1]);
+				break;
+            case TECLA_M:
+                status = SetEvent(events[2]);
+				break;
+			case TECLA_R:
+                status = SetEvent(events[3]);
+				break;
+            case TECLA_P:
+                status = SetEvent(events[4]);
+				break;
+            case TECLA_A:
+                status = SetEvent(events[5]);
+				break;
+            case ESC:
+                status = SetEvent(event_ESC);
+				break;
+        }
 		if (!status)
-			printf("Erro no disparo de algum do evento! Codigo = %d\n", GetLastError());
+			printf("Erro no disparo do evento! Codigo = %d\n", GetLastError());
 
 	} while (nTecla != ESC);
 
