@@ -137,6 +137,9 @@
       <Project>{d2c8d8f4-048b-4d66-9ae5-c2cacfbc0f27}</Project>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CheckForError.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
